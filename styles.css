@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: #1f1f1f;
+    line-height: 1.6;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("https://images.unsplash.com/photo-1511994298241-608e28f14fde?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.2rem;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 26px;
+    background: #a4d037;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gray {
+    background: #f6f6f6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* =========================
+   GRID / SERVICES
+========================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    font-weight: 500;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.info p {
+    margin: 14px 0;
+}
+
+.info a {
+    color: #2b6cb0;
+    text-decoration: none;
+}
+
+.info a:hover {
+    text-decoration: underline;
+}
+
+/* MAP */
+.map iframe {
+    width: 100%;
+    height: 320px;
+    border: 0;
+    border-radius: 10px;
+}
+
+/* =========================
+   FOOTER IMAGE (SEO SAFE)
+========================= */
+.footer img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* prevents layout shift */
+.footer {
+    line-height: 0;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+@media (max-width: 768px) {
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 60px 16px;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .map iframe {
+        height: 260px;
+    }
+}
+
+/* =========================
+   SMALL DEVICES TWEAK
+========================= */
+@media (max-width: 420px) {
+    .hero-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
