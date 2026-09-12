@@ -77,6 +77,34 @@ body {
 }
 
 /* =========================
+   SOCIAL MEDIA SECTION
+========================= */
+.video-section {
+    background: #ffffff;
+}
+
+.single-video-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.embed-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    overflow: hidden;
+    max-width: 560px;
+    width: 100%;
+}
+
+.embed-card iframe {
+    width: 100%;
+    display: block;
+    border: none;
+}
+
+/* =========================
    GRID / SERVICES
 ========================= */
 .grid {
@@ -127,7 +155,7 @@ body {
 }
 
 /* =========================
-   FOOTER IMAGE (SEO SAFE)
+   FOOTER IMAGE
 ========================= */
 .footer img {
     width: 100%;
@@ -136,16 +164,14 @@ body {
     object-fit: cover;
 }
 
-/* prevents layout shift */
 .footer {
     line-height: 0;
 }
 
 /* =========================
-   MOBILE OPTIMIZATION
+   RESPONSIVENESS (MOBILE / TABLET)
 ========================= */
 @media (max-width: 768px) {
-
     .hero-content h1 {
         font-size: 2.2rem;
     }
@@ -167,15 +193,8 @@ body {
     }
 }
 
-/* =========================
-   SMALL DEVICES TWEAK
-========================= */
-@media (max-width: 420px) {
-    .hero-content h1 {
-        font-size: 1.9rem;
-    }
-
-    .btn {
-        padding: 10px 20px;
+@media (max-width: 600px) {
+    .embed-card iframe {
+        height: 360px;
     }
 }
