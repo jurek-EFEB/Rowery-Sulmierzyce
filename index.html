@@ -46,6 +46,30 @@
 
 <body>
 
+<!-- PASEK GÓRNY / NAVBAR -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#" class="nav-logo">Bike & Sport</a>
+
+        <!-- Przycisk Hamburger (tylko na telefony) -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Otwórz menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Rozwijalne menu -->
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">O nas</a></li>
+            <li><a href="#news">Aktualności</a></li>
+            <li><a href="#services">Usługi</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="https://www.facebook.com/p/RowerySulmierzyce-100063221679029/" target="_blank" class="nav-social">Facebook</a></li>
+            <li><a href="tel:+48792449303" class="nav-btn">📞 792 449 303</a></li>
+        </ul>
+    </div>
+</nav>
+
 <header class="hero">
     <div class="hero-content">
         <h1>Bike & Sport</h1>
@@ -54,7 +78,7 @@
     </div>
 </header>
 
-<section class="section">
+<section id="about" class="section">
     <div class="container">
         <h2>Bike&Sport – Rowery Sulmierzyce</h2>
         <p>Bike&Sport to miejsce stworzone z pasji do rowerów i aktywnego stylu życia. Od ponad 10 lat dostarczamy naszym klientom sprawdzone rozwiązania oraz fachowe doradztwo w zakresie sprzedaży i serwisu rowerów.<br><br>
@@ -67,18 +91,18 @@ Zapraszamy do Bike&Sport w Sulmierzycach – miejsca, gdzie pasja spotyka się z
     </div>
 </section>
 
-<section class="section video-section">
+<section id="news" class="section video-section">
     <div class="container">
         <h2>Aktualności z Facebooka</h2>
         <div class="single-video-wrapper">
             <div class="embed-card">
-                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100063221679029%2Fvideos%2F772593538175066%2F&show_text=true&width=560&t=0" width="560" height="429" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100063221679029%2Fvideos%2F772593538175066%2F&show_text=true&width=500&t=0" width="500" height="429" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section gray">
+<section id="services" class="section gray">
     <div class="container">
         <h2>Usługi</h2>
 
@@ -132,6 +156,23 @@ Zapraszamy do Bike&Sport w Sulmierzycach – miejsca, gdzie pasja spotyka się z
         <img src="footer.jpg" alt="Bike & Sport Sulmierzyce banner">
     </picture>
 </footer>
+
+<!-- Skrypt obsługi rozwijania menu -->
+<script>
+    const toggleBtn = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    toggleBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Zamykanie menu po kliknięciu w dowolny link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+</script>
 
 </body>
 </html>
