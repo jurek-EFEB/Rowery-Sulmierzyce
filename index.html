@@ -93,11 +93,19 @@ Zapraszamy do Bike&Sport w Sulmierzycach – miejsca, gdzie pasja spotyka się z
 
 <section id="news" class="section video-section">
     <div class="container">
-        <h2>Aktualności z Facebooka</h2>
-        <div class="single-video-wrapper">
-            <div class="embed-card">
-                <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2F100063221679029%2Fvideos%2F772593538175066%2F&show_text=true&width=500&t=0" width="500" height="429" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
-            </div>
+        <h2>Aktualności</h2>
+        <div class="fb-widget-container">
+            <!-- Szerokość zmieniona na 340px, aby pasowało na każdy telefon -->
+            <iframe 
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100063221679029&tabs=timeline&width=340&height=600&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" 
+                width="340" 
+                height="600" 
+                style="border:none;overflow:hidden;max-width:100%;" 
+                scrolling="no" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+            </iframe>
         </div>
     </div>
 </section>
@@ -157,7 +165,7 @@ Zapraszamy do Bike&Sport w Sulmierzycach – miejsca, gdzie pasja spotyka się z
     </picture>
 </footer>
 
-<!-- Skrypt obsługi rozwijania menu -->
+<!-- Skrypt obsługi rozwijania menu na mobilkach -->
 <script>
     const toggleBtn = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
@@ -166,7 +174,6 @@ Zapraszamy do Bike&Sport w Sulmierzycach – miejsca, gdzie pasja spotyka się z
         navLinks.classList.toggle('active');
     });
 
-    // Zamykanie menu po kliknięciu w dowolny link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
